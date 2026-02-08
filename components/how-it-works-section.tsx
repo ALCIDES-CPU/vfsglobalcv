@@ -1,70 +1,77 @@
-import { ClipboardList, CreditCard, CalendarCheck, CheckCircle } from "lucide-react"
+import {
+  ClipboardList,
+  CreditCard,
+  CalendarCheck,
+  CheckCircle,
+} from "lucide-react"
 
 const steps = [
   {
     number: "01",
     icon: ClipboardList,
-    title: "Fill in Your Details",
+    title: "Preencha seus Dados",
     description:
-      "Complete the appointment form with your personal information, visa type, and preferred city.",
+      "Complete o formulario com suas informacoes pessoais, tipo de visto e cidade preferida.",
   },
   {
     number: "02",
     icon: CreditCard,
-    title: "Secure Payment",
+    title: "Pagamento Seguro",
     description:
-      "Proceed to our secure Stripe-powered payment page to confirm your service fee.",
+      "Siga para nossa pagina de pagamento segura via Stripe para confirmar a taxa do servico.",
   },
   {
     number: "03",
     icon: CalendarCheck,
-    title: "We Book Your Slot",
+    title: "Agendamos para Voce",
     description:
-      "Our team processes your request and secures the earliest available appointment on your behalf.",
+      "Nossa equipe processa seu pedido e garante o horario mais proximo disponivel em seu nome.",
   },
   {
     number: "04",
     icon: CheckCircle,
-    title: "Receive Confirmation",
+    title: "Receba a Confirmacao",
     description:
-      "Get your appointment details and preparation checklist delivered straight to your inbox.",
+      "Receba os detalhes do agendamento e o checklist de preparacao diretamente no seu e-mail.",
   },
 ]
 
 export function HowItWorksSection() {
   return (
-    <section id="how-it-works" className="bg-muted/50 py-20 lg:py-28">
+    <section id="como-funciona" className="bg-secondary/50 py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent">
-            Simple Process
-          </p>
-          <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            How It Works
+          <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-1.5">
+            <span className="text-xs font-semibold uppercase tracking-widest text-accent">
+              Passo a Passo
+            </span>
+          </div>
+          <h2 className="font-heading text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
+            Como Funciona
           </h2>
-          <p className="mt-4 text-pretty text-muted-foreground">
-            Getting your visa appointment is just four simple steps away.
+          <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
+            Seu agendamento de visto esta a apenas quatro passos simples.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, index) => (
             <div key={step.number} className="relative text-center">
               {index < steps.length - 1 && (
-                <div className="absolute left-1/2 top-10 hidden h-0.5 w-full bg-border lg:block" />
+                <div className="absolute left-[calc(50%+40px)] top-10 hidden h-[2px] w-[calc(100%-80px)] bg-border lg:block" />
               )}
 
-              <div className="relative mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full border-2 border-primary bg-card shadow-sm">
-                <span className="absolute -top-2 -right-2 flex h-7 w-7 items-center justify-center rounded-full bg-accent text-xs font-bold text-accent-foreground">
+              <div className="relative mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl border-2 border-accent/30 bg-card shadow-md">
+                <span className="absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full bg-accent text-xs font-bold text-accent-foreground shadow-sm">
                   {step.number}
                 </span>
                 <step.icon className="h-8 w-8 text-primary" />
               </div>
 
-              <h3 className="text-lg font-semibold text-foreground">
+              <h3 className="font-heading text-lg font-semibold text-foreground">
                 {step.title}
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+              <p className="mx-auto mt-2 max-w-[220px] text-sm leading-relaxed text-muted-foreground">
                 {step.description}
               </p>
             </div>
