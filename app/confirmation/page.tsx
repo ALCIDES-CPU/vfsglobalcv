@@ -59,7 +59,7 @@ export default function ConfirmationPage() {
                 <li className="flex items-start gap-3">
                   <CalendarCheck className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
                   <span>
-                    A nossa equipa agendara a sua entrevista e enviara a data e hora por e-mail em ate 24 horas.
+                    A nossa equipa agendara a sua entrevista e enviara a data e hora por e-mail em ate 24 horas. Em caso de duvida, contacte-nos pelo +238 436 6581 ou info.frcv@vfshelpline.com.
                   </span>
                 </li>
                 <li className="flex items-start gap-3">

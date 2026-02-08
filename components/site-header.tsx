@@ -30,11 +30,11 @@ export function SiteHeader() {
           <div className="flex items-center gap-5 text-xs text-primary-foreground/70">
             <span className="flex items-center gap-1.5">
               <Phone className="h-3 w-3" />
-              +351 21 000 0000
+              +238 436 6581
             </span>
             <span className="flex items-center gap-1.5">
               <Mail className="h-3 w-3" />
-              info@vfs.global
+              info.frcv@vfshelpline.com
             </span>
           </div>
           <div className="flex items-center gap-4 text-xs text-primary-foreground/70">
