@@ -140,7 +140,6 @@ export function StepPassportVisa({ data, errors, updateField }: Props) {
           <SelectContent>
             <SelectItem value="nao">Nao</SelectItem>
             <SelectItem value="sim">Sim</SelectItem>
-            <SelectItem value="sim-recusado">Sim, mas foi recusado</SelectItem>
           </SelectContent>
         </Select>
       </div>
