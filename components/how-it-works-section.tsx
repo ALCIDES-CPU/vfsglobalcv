@@ -1,38 +1,41 @@
+import Link from "next/link"
+import { Button } from "@/components/ui/button"
 import {
   ClipboardList,
+  Upload,
   CreditCard,
   CalendarCheck,
-  CheckCircle,
+  ArrowRight,
 } from "lucide-react"
 
 const steps = [
   {
     number: "01",
     icon: ClipboardList,
-    title: "Preencha seus Dados",
+    title: "Preencha os Dados",
     description:
-      "Complete o formulario com suas informacoes pessoais, tipo de visto e cidade preferida.",
+      "Forneca os seus dados pessoais, informacoes do passaporte e detalhes da viagem no formulario.",
   },
   {
     number: "02",
-    icon: CreditCard,
-    title: "Pagamento Seguro",
+    icon: Upload,
+    title: "Envie Documentos",
     description:
-      "Siga para nossa pagina de pagamento segura via Stripe para confirmar a taxa do servico.",
+      "Indique os documentos necessarios: passaporte, fotos, comprovativo financeiro e seguro de viagem.",
   },
   {
     number: "03",
-    icon: CalendarCheck,
-    title: "Agendamos para Voce",
+    icon: CreditCard,
+    title: "Pagamento Seguro",
     description:
-      "Nossa equipe processa seu pedido e garante o horario mais proximo disponivel em seu nome.",
+      "Finalize o pagamento da taxa de servico atraves da nossa plataforma segura via Stripe.",
   },
   {
     number: "04",
-    icon: CheckCircle,
-    title: "Receba a Confirmacao",
+    icon: CalendarCheck,
+    title: "Receba Confirmacao",
     description:
-      "Receba os detalhes do agendamento e o checklist de preparacao diretamente no seu e-mail.",
+      "Receba por e-mail a confirmacao do agendamento com data, hora e local da entrevista.",
   },
 ]
 
@@ -41,16 +44,14 @@ export function HowItWorksSection() {
     <section id="como-funciona" className="bg-secondary/50 py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-1.5">
-            <span className="text-xs font-semibold uppercase tracking-widest text-accent">
-              Passo a Passo
-            </span>
-          </div>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-accent">
+            Passo a Passo
+          </p>
           <h2 className="font-heading text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            Como Funciona
+            Como Funciona o Agendamento
           </h2>
           <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-            Seu agendamento de visto esta a apenas quatro passos simples.
+            O seu agendamento de visto para Portugal em quatro passos simples.
           </p>
         </div>
 
@@ -58,17 +59,17 @@ export function HowItWorksSection() {
           {steps.map((step, index) => (
             <div key={step.number} className="relative text-center">
               {index < steps.length - 1 && (
-                <div className="absolute left-[calc(50%+40px)] top-10 hidden h-[2px] w-[calc(100%-80px)] bg-border lg:block" />
+                <div className="absolute left-[calc(50%+40px)] top-10 hidden h-[2px] w-[calc(100%-80px)] bg-accent/20 lg:block" />
               )}
 
-              <div className="relative mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl border-2 border-accent/30 bg-card shadow-md">
+              <div className="relative mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl border-2 border-primary/20 bg-card shadow-md">
                 <span className="absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full bg-accent text-xs font-bold text-accent-foreground shadow-sm">
                   {step.number}
                 </span>
                 <step.icon className="h-8 w-8 text-primary" />
               </div>
 
-              <h3 className="font-heading text-lg font-semibold text-foreground">
+              <h3 className="font-heading text-base font-semibold text-foreground">
                 {step.title}
               </h3>
               <p className="mx-auto mt-2 max-w-[220px] text-sm leading-relaxed text-muted-foreground">
@@ -76,6 +77,19 @@ export function HowItWorksSection() {
               </p>
             </div>
           ))}
+        </div>
+
+        <div className="mt-14 text-center">
+          <Button
+            asChild
+            size="lg"
+            className="bg-accent px-8 text-accent-foreground hover:bg-accent/90"
+          >
+            <Link href="/agendamento">
+              Iniciar Agendamento
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </div>
     </section>

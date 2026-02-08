@@ -3,7 +3,6 @@ import { HeroSection } from "@/components/hero-section"
 import { TrustBanner } from "@/components/trust-banner"
 import { ServicesSection } from "@/components/services-section"
 import { HowItWorksSection } from "@/components/how-it-works-section"
-import { AppointmentForm } from "@/components/appointment-form"
 import { SiteFooter } from "@/components/site-footer"
 
 export default function Page() {
@@ -15,7 +14,6 @@ export default function Page() {
         <TrustBanner />
         <ServicesSection />
         <HowItWorksSection />
-        <AppointmentForm />
       </main>
       <SiteFooter />
     </div>

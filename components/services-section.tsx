@@ -19,37 +19,37 @@ const services = [
     icon: CalendarCheck,
     title: "Agendamento de Entrevista",
     description:
-      "Ajudamos voce a garantir os horarios mais proximos disponiveis no consulado ou embaixada de sua preferencia.",
+      "Garantimos os horarios mais proximos disponiveis no consulado de Portugal para a sua entrevista de visto.",
   },
   {
     icon: FileText,
-    title: "Preparacao de Documentos",
+    title: "Preparacao Documental",
     description:
-      "Orientacao especializada para reunir, organizar e preparar toda a documentacao exigida para o seu visto.",
+      "Orientacao completa para reunir e organizar toda a documentacao exigida: passaporte, fotos, comprovativos financeiros e mais.",
   },
   {
     icon: Globe,
-    title: "Suporte Multi-Paises",
+    title: "Vistos para Portugal",
     description:
-      "Atendemos vistos para EUA, Reino Unido, Espaco Schengen, Canada, Australia e muitos outros destinos.",
+      "Especializados em todos os tipos de visto portugues: turismo, trabalho, estudante, reagrupamento familiar e residencia.",
   },
   {
     icon: Users,
-    title: "Agendamento em Grupo",
+    title: "Agendamento Familiar",
     description:
-      "Viajando com familia ou colegas? Coordenamos agendamentos em grupo para que todos sejam atendidos juntos.",
+      "Viaja com familia? Coordenamos agendamentos em grupo para que todos sejam atendidos no mesmo dia.",
   },
   {
     icon: Clock,
-    title: "Processamento Prioritario",
+    title: "Processamento Expresso",
     description:
-      "Precisa de urgencia? Nosso servico prioritario ajuda voce a conseguir o horario mais rapido disponivel.",
+      "Servico prioritario para casos urgentes. Obtemos a data mais rapida disponivel para o seu agendamento.",
   },
   {
     icon: ShieldCheck,
-    title: "Seguro e Confidencial",
+    title: "Dados Seguros",
     description:
-      "Seus dados pessoais sao tratados com os mais altos padroes de seguranca. Nunca compartilhamos suas informacoes.",
+      "Os seus dados pessoais sao tratados com os mais altos padroes de seguranca e confidencialidade.",
   },
 ]
 
@@ -58,29 +58,27 @@ export function ServicesSection() {
     <section id="servicos" className="bg-background py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-accent/10 px-4 py-1.5">
-            <span className="text-xs font-semibold uppercase tracking-widest text-accent">
-              Nossos Servicos
-            </span>
-          </div>
+          <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-accent">
+            Nossos Servicos
+          </p>
           <h2 className="font-heading text-balance text-3xl font-bold tracking-tight text-foreground md:text-4xl">
-            Servicos Completos de Agendamento de Visto
+            Tudo o que Precisa para o Seu Visto
           </h2>
           <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
-            Da preparacao de documentos ao agendamento da sua entrevista,
-            cuidamos de cada detalhe para que voce foque na sua viagem.
+            Do agendamento da entrevista a preparacao de documentos, tratamos de
+            cada detalhe para que o seu processo decorra sem complicacoes.
           </p>
         </div>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <Card
               key={service.title}
-              className="group border-border/40 bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/5"
+              className="group border-border/50 bg-card transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg"
             >
               <CardHeader className="pb-2">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent/10 transition-colors group-hover:bg-accent/15">
-                  <service.icon className="h-6 w-6 text-accent" />
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-primary/5 transition-colors group-hover:bg-accent/10">
+                  <service.icon className="h-6 w-6 text-primary group-hover:text-accent" />
                 </div>
                 <CardTitle className="font-heading text-lg text-card-foreground">
                   {service.title}

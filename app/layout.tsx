@@ -8,9 +8,9 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans" })
 
 export const metadata: Metadata = {
-  title: "VFS Visa | Agendamento de Visto Profissional",
+  title: "VFS.GLOBAL | Servicos de Agendamento de Visto para Portugal",
   description:
-    "Assistencia profissional para agendamento de visto. Agende seu visto com confianca atraves da nossa plataforma segura e confiavel.",
+    "Plataforma oficial de agendamento de visto para Portugal. Agende sua entrevista consular com seguranca e rapidez.",
   icons: {
     icon: "/logo.png",
     apple: "/logo.png",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: "#0f2d4a",
+  themeColor: "#1a365d",
   width: "device-width",
   initialScale: 1,
 }

@@ -1,31 +1,29 @@
-import { ShieldCheck, Globe, Clock, Headphones } from "lucide-react"
+import Image from "next/image"
 
-const stats = [
-  { icon: ShieldCheck, value: "100%", label: "Processo Seguro" },
-  { icon: Globe, value: "50+", label: "Paises Atendidos" },
-  { icon: Clock, value: "24h", label: "Tempo de Resposta" },
-  { icon: Headphones, value: "24/7", label: "Suporte Disponivel" },
+const partners = [
+  { src: "/partners/republica-portuguesa.png", alt: "Republica Portuguesa - XXV Governo", width: 220, height: 60 },
+  { src: "/partners/compete-2020.png", alt: "COMPETE 2020", width: 120, height: 50 },
+  { src: "/partners/portugal-2020-eu.png", alt: "Portugal 2020 - Uniao Europeia", width: 240, height: 60 },
+  { src: "/partners/aima.png", alt: "AIMA - Agencia para a Integracao, Migracoes e Asilo", width: 140, height: 50 },
 ]
 
 export function TrustBanner() {
   return (
-    <section className="border-y border-border/40 bg-card py-8 lg:py-10">
+    <section className="border-y border-border/50 bg-card py-8 lg:py-10">
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
-        <div className="grid grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-8">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="flex flex-col items-center gap-2 text-center"
-            >
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent/10">
-                <stat.icon className="h-5 w-5 text-accent" />
-              </div>
-              <p className="font-heading text-2xl font-bold text-foreground">
-                {stat.value}
-              </p>
-              <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-                {stat.label}
-              </p>
+        <p className="mb-6 text-center text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+          Apoiantes e Parceiros Institucionais
+        </p>
+        <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-14">
+          {partners.map((p) => (
+            <div key={p.alt} className="flex items-center justify-center">
+              <Image
+                src={p.src || "/placeholder.svg"}
+                alt={p.alt}
+                width={p.width}
+                height={p.height}
+                className="h-auto max-h-10 w-auto object-contain opacity-70 grayscale transition-all hover:opacity-100 hover:grayscale-0 lg:max-h-12"
+              />
             </div>
           ))}
         </div>
