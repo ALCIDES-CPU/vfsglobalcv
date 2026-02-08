@@ -120,20 +120,20 @@ export function SiteFooter() {
             </h3>
             <ul className="flex flex-col gap-3">
               <li className="flex items-start gap-2.5">
-                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                <span className="text-sm text-primary-foreground/55">info@vfs.global</span>
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                <span className="text-sm text-primary-foreground/55">
+                  Av. Jorge Barbosa – Praia Shopping (1.o andar)
+                  <br />
+                  Praia, Cabo Verde
+                </span>
               </li>
               <li className="flex items-start gap-2.5">
                 <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                <span className="text-sm text-primary-foreground/55">+351 21 000 0000</span>
+                <span className="text-sm text-primary-foreground/55">+238 436 6581</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                <span className="text-sm text-primary-foreground/55">
-                  Praia, Santiago
-                  <br />
-                  Cabo Verde
-                </span>
+                <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+                <span className="text-sm text-primary-foreground/55">info.frcv@vfshelpline.com</span>
               </li>
             </ul>
           </div>
